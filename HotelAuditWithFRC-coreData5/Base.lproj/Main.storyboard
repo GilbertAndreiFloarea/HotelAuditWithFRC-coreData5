@@ -1,24 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nLi-7b-uAS">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Hotel Audit-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HotelAuditWithFRC_coreData5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="zF1-4t-nkv">
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="thingCellIdentifier" rowHeight="100" id="lJY-gX-F6w" customClass="ThingTableViewCell" customModule="HotelAuditWithFRC_coreData5" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lJY-gX-F6w" id="pvQ-Ns-jXe">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PzD-OZ-CC4">
+                                                    <rect key="frame" x="0.0" y="0.0" width="112.5" height="99.5"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaH-Dk-4aC">
+                                                    <rect key="frame" x="122.5" y="14.5" width="217.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vj-g4-1X9">
+                                                    <rect key="frame" x="122.5" y="65.5" width="217.5" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="kaH-Dk-4aC" secondAttribute="trailing" constant="20" id="2E2-uO-8kQ"/>
+                                                <constraint firstItem="PzD-OZ-CC4" firstAttribute="top" secondItem="pvQ-Ns-jXe" secondAttribute="top" id="3xq-mc-FiS"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="1vj-g4-1X9" secondAttribute="trailing" constant="20" id="71Q-7Q-wzq"/>
+                                                <constraint firstItem="1vj-g4-1X9" firstAttribute="leading" secondItem="PzD-OZ-CC4" secondAttribute="trailing" constant="10" id="9wR-Bb-dda"/>
+                                                <constraint firstItem="kaH-Dk-4aC" firstAttribute="leading" secondItem="PzD-OZ-CC4" secondAttribute="trailing" constant="10" id="Cst-tw-Kzq"/>
+                                                <constraint firstItem="kaH-Dk-4aC" firstAttribute="centerY" secondItem="pvQ-Ns-jXe" secondAttribute="centerY" multiplier="0.5" id="Dyd-CY-ZQo"/>
+                                                <constraint firstAttribute="bottom" secondItem="PzD-OZ-CC4" secondAttribute="bottom" id="JQk-Ec-eVv"/>
+                                                <constraint firstItem="1vj-g4-1X9" firstAttribute="centerY" secondItem="pvQ-Ns-jXe" secondAttribute="centerY" multiplier="1.5" id="eBE-Ta-NzO"/>
+                                                <constraint firstItem="PzD-OZ-CC4" firstAttribute="leading" secondItem="pvQ-Ns-jXe" secondAttribute="leading" id="jLz-fJ-dCo"/>
+                                                <constraint firstItem="PzD-OZ-CC4" firstAttribute="width" secondItem="pvQ-Ns-jXe" secondAttribute="width" multiplier="0.3" id="sy3-sm-Bby"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="brandLabel" destination="kaH-Dk-4aC" id="W1b-Of-Myl"/>
+                                            <outlet property="countLabel" destination="1vj-g4-1X9" id="wvW-Ye-5Ui"/>
+                                            <outlet property="xImageView" destination="PzD-OZ-CC4" id="lGY-8e-veY"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Vxd-m5-TrL"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="vWd-HQ-LNe"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zF1-4t-nkv" secondAttribute="trailing" id="CMR-Z2-R3m"/>
+                            <constraint firstItem="zF1-4t-nkv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="biu-rp-SYM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zF1-4t-nkv" secondAttribute="bottom" id="obk-jM-5GE"/>
+                            <constraint firstItem="zF1-4t-nkv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ycn-Ac-5HF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Hotel Audit" id="zHo-Ew-VCF">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="eS2-Fd-sC7">
+                            <connections>
+                                <action selector="addThing:" destination="BYZ-38-t0r" id="S4U-uA-6Y8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="composeButton" destination="eS2-Fd-sC7" id="v4Q-F8-0WI"/>
+                        <outlet property="tableView" destination="zF1-4t-nkv" id="bTe-eG-bh2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1076" y="132.68365817091455"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ae2-Yc-HT6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nLi-7b-uAS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Ztp-FK-H30">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Li1-Ee-f4Y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gGo-6x-U2c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="-653"/>
         </scene>
     </scenes>
 </document>

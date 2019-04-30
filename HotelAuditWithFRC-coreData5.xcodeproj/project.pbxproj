@@ -12,6 +12,12 @@
 		2C891A4822783FC6005434A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C891A4622783FC6005434A6 /* Main.storyboard */; };
 		2C891A4A22783FC9005434A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C891A4922783FC9005434A6 /* Assets.xcassets */; };
 		2C891A4D22783FC9005434A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C891A4B22783FC9005434A6 /* LaunchScreen.storyboard */; };
+		2C891A56227840AF005434A6 /* HotelAudit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C891A54227840AF005434A6 /* HotelAudit.xcdatamodeld */; };
+		2C891A592278412C005434A6 /* Thing+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C891A572278412C005434A6 /* Thing+CoreDataClass.swift */; };
+		2C891A5A2278412C005434A6 /* Thing+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C891A582278412C005434A6 /* Thing+CoreDataProperties.swift */; };
+		2C891A5C22784170005434A6 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C891A5B22784170005434A6 /* CoreDataStack.swift */; };
+		2C891A5E227841BF005434A6 /* hotel.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C891A5D227841BF005434A6 /* hotel.json */; };
+		2C891A6022784A1F005434A6 /* ThingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C891A5F22784A1F005434A6 /* ThingTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		2C891A4922783FC9005434A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C891A4C22783FC9005434A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C891A4E22783FC9005434A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C891A55227840AF005434A6 /* HotelAudit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HotelAudit.xcdatamodel; sourceTree = "<group>"; };
+		2C891A572278412C005434A6 /* Thing+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Thing+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2C891A582278412C005434A6 /* Thing+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Thing+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2C891A5B22784170005434A6 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		2C891A5D227841BF005434A6 /* hotel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hotel.json; sourceTree = "<group>"; };
+		2C891A5F22784A1F005434A6 /* ThingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +66,18 @@
 		2C891A4122783FC6005434A6 /* HotelAuditWithFRC-coreData5 */ = {
 			isa = PBXGroup;
 			children = (
+				2C891A572278412C005434A6 /* Thing+CoreDataClass.swift */,
+				2C891A582278412C005434A6 /* Thing+CoreDataProperties.swift */,
 				2C891A4222783FC6005434A6 /* AppDelegate.swift */,
 				2C891A4422783FC6005434A6 /* ViewController.swift */,
 				2C891A4622783FC6005434A6 /* Main.storyboard */,
 				2C891A4922783FC9005434A6 /* Assets.xcassets */,
 				2C891A4B22783FC9005434A6 /* LaunchScreen.storyboard */,
 				2C891A4E22783FC9005434A6 /* Info.plist */,
+				2C891A54227840AF005434A6 /* HotelAudit.xcdatamodeld */,
+				2C891A5B22784170005434A6 /* CoreDataStack.swift */,
+				2C891A5D227841BF005434A6 /* hotel.json */,
+				2C891A5F22784A1F005434A6 /* ThingTableViewCell.swift */,
 			);
 			path = "HotelAuditWithFRC-coreData5";
 			sourceTree = "<group>";
@@ -124,6 +142,7 @@
 			files = (
 				2C891A4D22783FC9005434A6 /* LaunchScreen.storyboard in Resources */,
 				2C891A4A22783FC9005434A6 /* Assets.xcassets in Resources */,
+				2C891A5E227841BF005434A6 /* hotel.json in Resources */,
 				2C891A4822783FC6005434A6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +154,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C891A56227840AF005434A6 /* HotelAudit.xcdatamodeld in Sources */,
 				2C891A4522783FC6005434A6 /* ViewController.swift in Sources */,
+				2C891A592278412C005434A6 /* Thing+CoreDataClass.swift in Sources */,
+				2C891A6022784A1F005434A6 /* ThingTableViewCell.swift in Sources */,
+				2C891A5C22784170005434A6 /* CoreDataStack.swift in Sources */,
 				2C891A4322783FC6005434A6 /* AppDelegate.swift in Sources */,
+				2C891A5A2278412C005434A6 /* Thing+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +360,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2C891A54227840AF005434A6 /* HotelAudit.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2C891A55227840AF005434A6 /* HotelAudit.xcdatamodel */,
+			);
+			currentVersion = 2C891A55227840AF005434A6 /* HotelAudit.xcdatamodel */;
+			path = HotelAudit.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2C891A3722783FC6005434A6 /* Project object */;
 }
